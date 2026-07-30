@@ -1,0 +1,340 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(https://static.vecteezy.com/system/resources/thumbnails/030/663/672/small_2x/calming-anime-background-high-quality-free-photo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0%;
+  background-position-x: center;
+  font-family: Arial, sans-serif;
+}
+
+.computer {
+  background: #222;
+  padding: 20px;
+  border-radius: 20px;
+  width: 320px;
+
+  /* Bingkai nyala warna-warni */
+  box-shadow: 0 0 25px #ff0000;
+  animation: glow 5s linear infinite, kanan 2s ease-in-out 1;
+}
+
+@keyframes glow {
+  12.5%  { box-shadow: 0 0 25px orange; }
+  25%  { box-shadow: 0 0 100px yellow; }
+  37.5%  { box-shadow: 0 0 25px lime; }
+  50% { box-shadow: 0 0 100px cyan; }
+  62.5% { box-shadow: 0 0 25px blue; }
+  75% { box-shadow: 0 0 100px magenta; }
+  100% { box-shadow: 0 0 25px red; }
+}
+
+/* Animasi goyang kiri-kanan */
+@keyframes goyang {
+  0% { transform: translatex(1000); }
+  25% { transform: translatex(-150px); }
+  50% { transform: translatex(50px); }
+  75% { transform: translatex(-50px); }
+  100% { transform: translatex(1000); }
+}
+
+/* Animasi muncul dari atas bawah */
+@keyframes atas {
+  0% {
+    transform: translatey(10%);
+    opacity: 0;
+}
+  100% {
+    transform: translatey(0); 
+    opacity: 1;
+ }
+}
+
+@keyframes muter {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(180deg); }
+  50% { transform: rotate(0deg); }
+  75% { transform: rotate(-180deg); }
+  100% { transform: rotate(0deg); }
+}
+
+/* Animasi nyala RGB */
+@keyframes rgbGlow {
+  0%   { box-shadow: 0 0 100px 20px rgb(255, 0, 0) inset; }
+  20%  { box-shadow: 0 0 100px 20px rgb(255, 255, 0) inset; }
+  40%  { box-shadow: 0 0 100px 20px rgb(0, 255, 0) inset; }
+  60%  { box-shadow: 0 0 100px 20px rgb(0, 255, 255) inset; }
+  80%  { box-shadow: 0 0 100px 20px rgb(0, 0, 255) inset; }
+  100% { box-shadow: 0 0 100px 20px rgb(255, 0, 255) inset; }
+}
+
+/* Animasi muncul dari kanan untuk deskripsi */
+@keyframes kanandeskripsi {
+  0% {
+    transform: translatex(100%);
+    opacity: 0;
+}
+  100% {
+    transform: translatex(0); 
+    opacity: 1;
+ }
+}
+
+/* Animasi muncul dari kanan */
+@keyframes kanan {
+  0% {
+    transform: translatex(100%);
+    opacity: 0;
+}
+  100% {
+    transform: translatex(0); 
+    opacity: 1;
+ }
+  0% { transform: translatex(1000); }
+  25% { transform: translatex(-150px); }
+  50% { transform: translatex(50px); }
+  75% { transform: translatex(-50px); }
+  100% { transform: translatex(1000); }
+}
+
+/* Animasi muncul dari kiri */
+@keyframes kiri {
+  0% {
+    transform: translatex(-100%);
+    opacity: 0;
+}
+100% {
+    transform: translatex(0); 
+    opacity: 1;
+ }
+  0% { transform: translatex(-1000); }
+  25% { transform: translatex(150px); }
+  50% { transform: translatex(-50px); }
+  75% { transform: translatex(50px); }
+  100% { transform: translatex(-1000); }
+}
+
+.screen input {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background:  rgba(255, 255, 255, 0.3);
+  color: rgb(0, 0, 0);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  background: #ff7300;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #00f7ff;
+}
+
+.anggota{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 20px;
+
+      /* Bingkai nyala warna-warni */
+  box-shadow: 0 0 25px #ffffff;
+  animation: glow 5s linear infinite, atas 2s ease-in-out 1;
+}
+
+/* Animasi warna bergerak */
+@keyframes bgmove {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Animasi glow lembut */
+@keyframes murub {
+  0%   { box-shadow: 0 0 10px #ff0000; }
+  25%  { box-shadow: 0 0 20px #00ff00; }
+  50%  { box-shadow: 0 0 10px #0000ff; }
+  75%  { box-shadow: 0 0 20px #ffff00; }
+  100% { box-shadow: 0 0 100px red}
+}
+
+/* Sembunyikan checkbox */
+#CLICKAnim {
+  display: none;
+}
+
+/* Label sebagai tombol */
+label {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  user-select: none;
+}
+
+/* Elemen yang akan dianimasikan */
+.MEMUTAR {
+  position: absolute;
+  bottom: 60px; /* agar tidak ketumpuk tombol */
+  left: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px 20px;
+  border-radius: 20px;
+  transform-origin: center center;
+  transition: box-shadow 0.3s ease;
+  font-family: Arial, sans-serif;
+}
+
+/* Definisi animasi muter */
+@keyframes muter {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(1800deg); }
+}
+
+/* Aktifkan animasi saat checkbox dicentang */
+#CLICKAnim:checked + label + .MEMUTAR + .computer {
+  animation: glow 2s linear infinite, muter 2s ease-in-out 1;
+  box-shadow: 0 0 15px #007bff;
+  box-shadow: 0 0 25px #ffffff;
+  background-image: linear-gradient(
+    270deg,
+    red,
+    orange,
+    yellow,
+    lime,
+    cyan,
+    blue,
+    magenta,
+    red
+  );
+  background-size: 800% 800%;
+  animation: bgmove 8s linear infinite, kiri 2s ease-in-out 1;
+}
+
+/* Tombol di pojok kanan bawah */
+#toggleDesc {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  padding: 10px 15px;
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    lime,
+    cyan,
+    blue,
+    magenta,
+    red
+  );
+  background-size: 400% 400%;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 0 20px #fff;
+  animation: btnGlow 5s linear infinite, colorShift 8s linear infinite;
+  transition: transform 0.2s;
+}
+
+#toggleDesc:hover {
+  transform: scale(1.05);
+}
+
+/* Kotak deskripsi di pojok kanan atas */
+#deskripsiBox {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 320px;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #000;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 0 25px #ffffff;
+  backdrop-filter: blur(4px);
+  animation: slideInRight 0.5s ease-out, glowBox 5s linear infinite, atas 1s ease-in-out 1;
+}
+
+/* Awalnya disembunyikan */
+.hidden {
+  display: none;
+}
+
+/* Animasi muncul dari kanan */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animasi muncul dari kanan */
+@keyframes slideInleft {
+  from {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animasi warna bergerak */
+@keyframes colorShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Efek glow tombol */
+@keyframes btnGlow {
+  0%   { box-shadow: 0 0 10px red; }
+  25%  { box-shadow: 0 0 15px yellow; }
+  50%  { box-shadow: 0 0 10px cyan; }
+  75%  { box-shadow: 0 0 15px magenta; }
+  100% { box-shadow: 0 0 10px red; }
+}
+
+/* Efek glow kotak deskripsi */
+@keyframes glowBox {
+  0%   { box-shadow: 0 0 10px red; }
+  25%  { box-shadow: 0 0 20px yellow; }
+  50%  { box-shadow: 0 0 10px lime; }
+  75%  { box-shadow: 0 0 20px cyan; }
+  100% { box-shadow: 0 0 10px magenta; }
+}
