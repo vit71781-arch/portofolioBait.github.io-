@@ -1,56 +1,25 @@
 body {
-  min-height: 2000px;
+  min-height: 1000px;
+  background-color: rgb(13, 206, 219); 
 }
 
-.nav-color {
-  background-color: #2b2b2b;
+p{
+  color: rgb(95, 93, 93);
 }
 
-.jumbotron {
-  padding-top: 2rem;
-  background-color: rgb(104, 143, 88);
+/* nav setting */
+.nv-css{
+background-color: rgba(41 47 86)
 }
 
-#about-color {
-  background-color: rgb(255, 247, 189);
+
+/* jq 1*/
+.j1 {
+  background-image: linear-gradient(rgb(0 115 152), rgba(0, 191, 166, 0.774)), url(/img/c1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0%;
 }
 
-/* card setting str */
-.parent {
-  width: 300px;
-  padding: 20px;
-  perspective: 1000px;
-}
 
-.card {
-  background-color: #faf6f0;
-  border: #5c8272;
-  transition: all 0.5s ease-in-out;
-}
-.card-title {
-  color: #f1a22b;
-  font-weight: 500;
-}
-
-.card:hover {
-  background-position:
-    -100px 100px,
-    -100px 100px;
-  transform: rotate3d(0.5, 1, 0, 30deg);
-}
-/* card setting end */
-
-#Projek {
-  margin-top: -1%;
-  background-color: rgb(104, 143, 88);
-}
-
-.footer {
-  margin-top: -1%;
-  background-color: rgb(255, 247, 189);
-}
-
-.nav-color-ftr {
-  background-color: #2b2b2b;
-  min-height: 200px;
-}
