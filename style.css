@@ -1,10 +1,6 @@
-body {
-  min-height: 1000px;
-  background-color: rgb(13, 206, 219); 
-}
 
 p{
-  color: rgb(95, 93, 93);
+  color: rgb(22, 20, 20);
 }
 
 /* nav setting */
@@ -12,6 +8,10 @@ p{
 background-color: rgba(41 47 86)
 }
 
+/* skil setting */
+.skil{
+  background-color: rgb(9, 204, 218);
+}
 
 /* jq 1*/
 .j1 {
@@ -20,6 +20,11 @@ background-color: rgba(41 47 86)
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0%;
+}
+
+article{
+   background-color: rgb(29, 129, 236); 
+  min-height: 500px;
 }
 
 
